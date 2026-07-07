@@ -1,0 +1,20 @@
+We are looking for a Python Developer with strong programming and problem-solving skills to develop modern web applications.
+
+Required Skills:
+- Python
+- HTML
+- CSS
+- JavaScript
+- React
+- Git
+- GitHub
+- VS Code
+- Communication
+- Problem Solving
+
+Responsibilities:
+- Develop web applications using Python.
+- Work with frontend technologies.
+- Collaborate with the development team.
+- Write clean and maintainable code.
+- Debug and improve application performance.
