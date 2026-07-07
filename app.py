@@ -65,10 +65,33 @@ with col1:
     )
 
 with col2:
-    job_file = st.file_uploader(
-        "Upload Job Description (TXT)",
-        type=["txt"]
+
+    st.subheader("Job Description")
+
+    jd_option = st.radio(
+        "Choose Input Method",
+        ["Upload TXT File", "Paste Job Description"]
     )
+
+    job_description = ""
+
+    if jd_option == "Upload TXT File":
+
+        job_file = st.file_uploader(
+            "Upload Job Description",
+            type=["txt"]
+        )
+
+        if job_file is not None:
+            job_description = job_file.read().decode("utf-8")
+
+    else:
+
+        job_description = st.text_area(
+            "Paste Job Description",
+            height=200,
+            placeholder="Paste the Job Description here..."
+        )
 
 st.markdown("")
 
@@ -92,7 +115,7 @@ skills = [
 
 if analyze:
 
-    if resume_file is None or job_file is None:
+    if resume_file is None or job_description.strip() == "":
         st.error("Please upload both Resume and Job Description.")
 
     else:
@@ -104,7 +127,6 @@ if analyze:
         for page in document:
             resume_text += page.get_text()
 
-        job_description = job_file.read().decode("utf-8")
 
         # Candidate Name Extraction
 
@@ -233,10 +255,33 @@ if analyze:
         if skill_match >= 80:
             st.success("Suitable Candidate")
 
-        elif skill_match >= 50:
+        elif skill_match >= 60:
             st.warning("Moderately Suitable")
 
         else:
             st.error("Not Suitable")
+            st.markdown("---")
+
+        st.subheader("Final Result")
+
+        if skill_match >= 80:
+            final_status = "Suitable Candidate"
+
+        elif skill_match >= 50:
+            final_status = "Moderately Suitable"
+
+        else:
+            final_status = "Not Suitable"
+
+        st.success(f"""
+        Candidate Name : {candidate_name}
+
+        Similarity Score : {score:.2f}%
+
+        Skill Match : {skill_match:.2f}%
+
+        Recommendation : {final_status}
+        """)
         
+       
        
