@@ -1,8 +1,8 @@
-AI-Powered Resume Screening System
+**AI-Powered Resume Screening System**
 
 An AI-based Resume Screening Web Application developed using Python, Streamlit, and Natural Language Processing (NLP). The application compares a candidate's resume with a job description, identifies matching and missing skills, calculates similarity scores, and provides a hiring recommendation.
 
-Project Overview
+**Project Overview**
 
 This project automates the initial resume screening process by analyzing a candidate's resume against a given job description.
 
@@ -12,7 +12,7 @@ It uses:
 - Skill Matching
 - Candidate Name Extraction
 
- Features
+ **Features**
 
  Upload Resume (PDF)
 - Upload Job Description (TXT)
@@ -25,7 +25,7 @@ It uses:
 - Recommendation Generation
 - Final Result Summary
 
- Technologies Used
+ **Technologies Used**
 
 - Python
 - Streamlit
@@ -35,7 +35,7 @@ It uses:
 - Cosine Similarity
 - Regular Expressions (re)
 
-Project Structure
+**Project Structure**
 
 Resume_AI_Web_App/
 │
@@ -44,7 +44,7 @@ Resume_AI_Web_App/
 ├── README.md
 ├── job_description.txt
 
-Installation
+**Installation**
 
 Clone the repository
 bash
@@ -62,7 +62,7 @@ Run the application
 bash
 streamlit run app.py
 
-Application Workflow
+**Application Workflow**
 
 1. Upload Resume (PDF)
 2. Upload or Paste Job Description
@@ -73,7 +73,7 @@ Application Workflow
 7. Generate Recommendation
 8. Display Final Result
 
-Output
+**Output**
 
 The application displays:
 
@@ -85,7 +85,7 @@ The application displays:
 - Recommendation
 - Final Result
 
- Future Enhancements
+ **Future Enhancements**
 
 - Support DOCX Resume
 - Bulk Resume Screening
