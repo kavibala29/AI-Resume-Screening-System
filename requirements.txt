@@ -2,5 +2,3 @@ streamlit
 PyMuPDF
 scikit-learn
 pandas
-numpy
-sentence-transformers
