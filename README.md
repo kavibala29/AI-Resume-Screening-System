@@ -1,41 +1,37 @@
-**AI-Powered Resume Screening System**
+# AI-Powered Resume Screening System
 
-An AI-based Resume Screening Web Application developed using Python, Streamlit, and Natural Language Processing (NLP). The application compares a candidate's resume with a job description, identifies matching and missing skills, calculates similarity scores, and provides a hiring recommendation.
+## Project Overview
 
-**Project Overview**
+The AI-Powered Resume Screening System is a web-based application developed using Python and Streamlit. It automates the resume screening process by comparing a candidate's resume with a Job Description using Natural Language Processing (NLP) techniques.
 
-This project automates the initial resume screening process by analyzing a candidate's resume against a given job description.
+The application extracts text from PDF resumes, identifies matching and missing skills, calculates an AI Similarity Score using TF-IDF Vectorizer and Cosine Similarity, and generates a recommendation based on the candidate's skill match.
 
-It uses:
-- TF-IDF Vectorizer
-- Cosine Similarity
-- Skill Matching
-- Candidate Name Extraction
+Additionally, the system automatically extracts the candidate's name from the uploaded resume, generates a structured screening report using Pandas, and allows users to download the report as a CSV file.
 
- **Features**
+## Features
 
  Upload Resume (PDF)
-- Upload Job Description (TXT)
-- Paste Job Description
-- Automatic Candidate Name Extraction
-- Matched Skills Detection
-- Missing Skills Detection
-- AI Similarity Score
-- Skill Match Percentage
-- Recommendation Generation
-- Final Result Summary
+ Upload Job Description (TXT)
+ Paste Job Description directly
+ Automatic Candidate Name Extraction
+ Skill Matching
+ Missing Skill Detection
+ AI Similarity Score Calculation
+ Candidate Recommendation
+ Screening Report using Pandas
+ Download Screening Report (CSV)
 
- **Technologies Used**
+## Technologies Used
+ python
+ Streamlit
+ PyMuPDF
+ Pandas
+ Scikit-learn
+ TF-IDF Vectorizer
+ Cosine Similarity
+ Regular Expressions (Regex)
 
-- Python
-- Streamlit
-- PyMuPDF
-- Scikit-learn
-- TF-IDF Vectorizer
-- Cosine Similarity
-- Regular Expressions (re)
-
-**Project Structure**
+## Project Structure
 
 Resume_AI_Web_App/
 │
@@ -44,36 +40,37 @@ Resume_AI_Web_App/
 ├── README.md
 ├── job_description.txt
 
-**Installation**
+## Installation
 
-Clone the repository
-bash
-git clone https://github.com/kavibala29/AI-Resume-Screening-System.git
+Install the required libraries:
 
-Go to the project folder
-bash
-cd AI-Resume-Screening-System
-
-Install dependencies
 bash
 pip install -r requirements.txt
 
-Run the application
+## Run the Application
+
+bash
+py -m streamlit run app.py
+
+or
+
 bash
 streamlit run app.py
 
-**Application Workflow**
+## Working Process
 
 1. Upload Resume (PDF)
 2. Upload or Paste Job Description
-3. Extract Resume Text
-4. Extract Required Skills
-5. Calculate AI Similarity Score
-6. Identify Matched & Missing Skills
-7. Generate Recommendation
-8. Display Final Result
+3. Extract Resume Text using PyMuPDF
+4. Extract Candidate Name
+5. Compare Resume and Job Description
+6. Calculate AI Similarity Score using TF-IDF and Cosine Similarity
+7. Identify Matched Skills and Missing Skills
+8. Generate Recommendation
+9. Create Screening Report using Pandas
+10. Download Screening Report as CSV
 
-**Output**
+## Output
 
 The application displays:
 
@@ -83,17 +80,21 @@ The application displays:
 - AI Similarity Score
 - Skill Match Percentage
 - Recommendation
-- Final Result
+- Screening Report (Table)
+- CSV Download Option
 
- **Future Enhancements**
+---
+
+## Future Enhancements
 
 - Support DOCX Resume
-- Bulk Resume Screening
-- Export Results to Excel/PDF
-- Semantic Matching using Sentence Transformers
-- ATS Score Prediction
+- Automatic Skill Extraction using NLP
+- Multiple Resume Screening
+- Resume Ranking
+- Recruiter Login System
+- Database Integration
 
- Developed By
+## Developed By
 
- Kavibala I
+**Kavibala**
 
