@@ -272,7 +272,7 @@ if analyze:
         if skill_match >= 80:
             final_status = "Suitable Candidate"
 
-        elif skill_match >= 50:
+        elif skill_match >= 60:
             final_status = "Moderately Suitable"
 
         else:
